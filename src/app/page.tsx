@@ -81,7 +81,7 @@ export default function HomePage() {
         sonnerToast.success('Success', { description: `Category "${data.name}" created.` });
       }
       handleCloseModal();
-    } catch (error) {
+    } catch {
       sonnerToast.error('Error', { description: 'Failed to save category.' });
     } finally {
       setIsSubmittingForm(false);
@@ -103,7 +103,7 @@ export default function HomePage() {
       sonnerToast.success('Success', { description: `Category "${deletingCategory.name}" deleted.` });
       setIsDeleteDialogOpen(false);
       setDeletingCategory(null);
-    } catch (error) {
+    } catch {
       sonnerToast.error('Error', { description: 'Failed to delete category.' });
     } finally {
       setIsDeletingCategoryState(false);
@@ -121,7 +121,7 @@ export default function HomePage() {
         )
       );
       sonnerToast.info('Status Updated', { description: `Category status changed to ${is_active ? 'active' : 'inactive'}.`});
-    } catch (error) {
+    } catch {
       sonnerToast.error('Error', { description: 'Failed to update status.' });
     } finally {
       setIsTogglingStatusForId(null);
