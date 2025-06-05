@@ -49,7 +49,7 @@ const CategoryCard: FC<CategoryCardProps> = ({
                     </div>
 
                     <div className="p-2 rounded-lg flex items-center justify-center shrink-0 w-10 h-10" 
-                    style={{backgroundColor: category.color + "20"}}>
+                    style={{backgroundColor: category.color + "40"}}>
                         <DynamicIcon name={category.icon} style={{ color: category.color }} className="w-6 h-6" />
                     </div>
                     <div className="flex-1 min-w-0">
