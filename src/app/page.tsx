@@ -2,9 +2,9 @@
 import { useState, useEffect, useMemo } from 'react';
 import type { Category, CategoryFormData } from '@/lib/types';
 import Header from '@/pages/categories/components/layout/header';
-import CategoryGrid from '@/pages/categories/components/categories/SkeletonCard';
-import CategoryEditModal from '@/pages/categories/components/categories/EditCategory';
-import CategoryDeleteDialog from '@/pages/categories/components/categories/DeleteCategoryModal';
+import CategoryGrid from '@/components/categories/SkeletonCard';
+import CategoryEditModal from '@/components/categories/EditCategory';
+import CategoryDeleteDialog from '@/components/categories/DeleteCategoryModal';
 import { toast as sonnerToast } from 'sonner'; 
 import {DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors, type DragEndEvent} from '@dnd-kit/core';
 import { arrayMove, sortableKeyboardCoordinates} from '@dnd-kit/sortable';
