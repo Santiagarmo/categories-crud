@@ -43,7 +43,7 @@ const CategoryCard: FC<CategoryCardProps> = ({
 
     return(
         <Card ref={setNodeRef} style={style} className={cn("flex flex-col h-full shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out touch-manipulation", isDragging && "opacity-75 shadow-2xl z-50" )}>
-                <CardHeader className="flex flex-row items-center gap-2 space-y-0 pb-3">
+                <CardHeader className="flex flex-row items-center gap-2 space-y-0 pb-3 flex-shrink-0">
                     <div {...attributes} {...listeners} className="cursor-grab p-1 -ml-1 text-muted-foreground hover:text-foreground ">
                         <GripVertical className="h-5 w-5" />
                     </div>
@@ -79,16 +79,14 @@ const CategoryCard: FC<CategoryCardProps> = ({
                         <span>Sort Order: {category.sort_order}</span>
                     </div>
                 </CardContent>
-                <CardFooter className="flex justify-end gap-2 border-t pt-3">
-                    <Button variant="outline" size="sm" onClick={() => onEdit(category)} className="hover:bg-accent/20">
-                    <Edit3 className="mr-1 h-4 w-4" /> Edit
+                <CardFooter className="flex justify-end gap-2 border-t pt-3 flex-shrink-0">
+                    <Button variant="outline" size="sm" onClick={() => onEdit(category)} className="hover:bg-accent/20 cursor-pointer">
+                        <Edit3 className="mr-1 h-4 w-4" /> Edit
                     </Button>
-                    <Button variant="destructive" size="sm" onClick={() => onDelete(category)} className="hover:bg-destructive/80">
-                    <Trash2 className="mr-1 h-4 w-4" /> Delete
+                    <Button variant="destructive" size="sm" onClick={() => onDelete(category)} className="hover:bg-destructive/80 bg-red-500 text-white cursor-pointer">
+                        <Trash2 className="mr-1 h-4 w-4" /> Delete
                     </Button>
                 </CardFooter>
-
-
         </Card>
     )
 }
